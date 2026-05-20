@@ -40,7 +40,7 @@ pip install -e .
 hf-kit diskspace EleutherAI/gpt-j-6b
 
 ```
-![Storage Assessment](./screenshots/diskspace.png)
+![Storage Assessment](https://github.com/kuyesu/hf-tool/blob/main/screenshot/diskspace.png)
 
 
 #### 2. `vibecheck`
@@ -60,7 +60,7 @@ hf-kit peek gpt2
 
 ```
 
-![Structural Architecture Peek](screenshots/peek.png)
+![Structural Architecture Peek](https://github.com/kuyesu/hf-tool/blob/main/screenshot/diskspace.png)
 
 
 ### Private & Gated Repositories
