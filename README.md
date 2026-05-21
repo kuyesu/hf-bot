@@ -1,9 +1,9 @@
-# 🤗 hf-kit
+# 🤗 hf-bot
 
-[![PyPI version](https://img.shields.io/pypi/v/hf-kit.svg)](https://pypi.org/project/hf-kit/)
+[![PyPI version](https://img.shields.io/pypi/v/hf-bot.svg)](https://pypi.org/project/hf-bot/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A simple CLI utility suite to inspect Hugging Face repositories, evaluate local disk space safety, and check model trends.
+An intelligent, multi-provider agentic CLI playground for the Hugging Face Ecosystem. Instead of acting as a rigid shortcut router, `hf-bot` functions as an interactive co-pilot capable of executing local system operations, pulling real-time repository telemetry, checking disk capacity, and maintaining stateful multi-turn developer sessions.
 
 ---
 
@@ -18,7 +18,7 @@ A simple CLI utility suite to inspect Hugging Face repositories, evaluate local 
 ### Installation
 
 ```bash
-pip install hf-kit
+pip install hf-bot
 
 ```
 
@@ -26,7 +26,7 @@ For local development mode and contributions:
 
 ```bash
 git clone [https://github.com/kuyesu/hf-tool.git](https://github.com/kuyesu/hf-tool.git)
-cd hf-kit
+cd hf-bot
 pip install -e .
 
 ```
@@ -34,11 +34,21 @@ pip install -e .
 
 ### Usage & Commands
 
+####  `Open hf-bot CLI`
+Omit string arguments or use the start target keyword to drop directly into a stateful interactive REPL environment loop:
+
+```bash
+hf-bot
+# OR
+hf-bot start
+
+```
+
 #### 1. `diskspace`
 Pass a Huggingface repository path (<repo_id>) to check its total weight footprint against your available local storage space:
 
 ```bash
-hf-kit diskspace EleutherAI/gpt-j-6b
+hf-bot diskspace EleutherAI/gpt-j-6b
 
 ```
 ![Storage Assessment](https://github.com/kuyesu/hf-tool/blob/main/screenshot/diskspace.png)
@@ -49,7 +59,7 @@ hf-kit diskspace EleutherAI/gpt-j-6b
 Pass a Huggingface repository ID (repo_id) to evaluate monthly usage trends, community traction, and lifecycle milestones:
 
 ```bash
-hf-kit vibecheck EleutherAI/gpt-j-6b
+hf-bot vibecheck EleutherAI/gpt-j-6b
 
 ```
 
@@ -60,16 +70,28 @@ hf-kit vibecheck EleutherAI/gpt-j-6b
 Pass a Huggingface model identifier (<model_id>) to fetch and parse its metadata parameters instantly:
 
 ```bash
-hf-kit peek gpt2
+hf-bot peek gpt2
 
 ```
 
 ![Structural Architecture Peek](https://github.com/kuyesu/hf-tool/blob/main/screenshot/peek.png)
 
 
+### Environment Setup
+hf-bot is entirely model-agnostic and will seamlessly fall back depending on the environment variables exported in your terminal profile session.
+
+Bash
+#### To run via flagship cloud APIs (e.g., xAI Grok-4.3 Engine)
+export XAI_API_KEY="your-grok-api-key"
+
+#### To run via entirely FREE, local offline architectures (e.g., Ollama / LM Studio)
+export LOCAL_MODEL_URL="http://localhost:11434/v1"
+export LOCAL_MODEL_NAME="llama3"  # Or your chosen local tool-calling weight base
+
+
 ### Private & Gated Repositories
 
-If a repository requires authentication, `hf-kit` securely prompts for your Hugging Face token and saves it locally:
+If a repository requires authentication, `hf-bot` securely prompts for your Hugging Face token and saves it locally:
 
 ```text
 🔒 Authentication Needed
@@ -82,7 +104,7 @@ Enter your Hugging Face Access Token (input will be hidden): ·········�
 ### Uninstallation
 
 ```bash
-pip uninstall hf-kit
+pip uninstall hf-bot
 
 ```
 

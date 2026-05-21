@@ -12,6 +12,7 @@ from rich.table import Table
 from rich.panel import Panel
 from rich.progress import Progress, SpinnerColumn, TextColumn
 from rich.prompt import Prompt
+from agent import run_agent
 
 console = Console()
 
@@ -275,8 +276,27 @@ def handle_peek(args):
 # CORE ENTRY ROUTER
 # ==========================================
 def main():
+    # Capture everything after 'hf-bot' command invocation
+    args = sys.argv[1:]
+    
+    # CASE 1: No arguments provided (e.g., 'hf-bot')
+    if not args:
+        initial_prompt = ""
+        
+    # CASE 2: Explicit command keyword provided (e.g., 'hf-bot start')
+    elif args[0].strip().lower() == "start":
+        # If they wrote 'hf-bot start "some string"', use the trailing arguments,
+        # otherwise default to a clean slate initialization parameter
+        initial_prompt = " ".join(args[1:]) if len(args) > 1 else ""
+        
+    # CASE 3: Inline prompt provided directly (e.g., hf-bot "check popularity...")
+    else:
+        initial_prompt = " ".join(args)
+
+    # Boot up the interactive agent session
+    run_agent(initial_prompt)
     parser = argparse.ArgumentParser(
-        description="hf-kit: An extended utility suite for structural validation and hub metrics."
+        description="hf-bot: An extended utility suite for structural validation and hub metrics."
     )
     subparsers = parser.add_subparsers(dest="command", required=True, help="Subcommand to run")
     
