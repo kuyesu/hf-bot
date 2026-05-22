@@ -1,60 +1,67 @@
 {
-  "$schema": "https://fundingjson.org/schema/v1.json",
-  "name": "hf-bot",
-  "description": "An open-source terminal developer agent and local sandbox workspace utility for safely validating Hugging Face repositories and automating local terminal workflows.",
-  "project_url": "https://github.com/kuyesu/hf-bot",
-  "license": "MIT",
-  "stage": "production-ready",
-  "components": [
+  "$schema": "https://fundingjson.org/schema/v1.1.0.json",
+  "version": "v1.1.0",
+  "entity": {
+    "type": "group",
+    "role": "maintainer",
+    "name": "hf-bot Core Team",
+    "email": "kuyesu22@gmail.com",
+    "description": "Open-source development collective dedicated to making CLI tools safer and more accessible for engineers using machine learning architectures.",
+    "webpageUrl": {
+      "url": "https://github.com/kuyesu/hf-bot",
+      "wellKnown": ""
+    }
+  },
+  "projects": [
     {
-      "name": "hf-bot CLI Client Engine",
-      "type": "software_library",
-      "description": "Local sandbox interactive session utility equipped with zero-latency streaming architecture, intent-based dynamic tool routing, and human-in-the-loop terminal execution safety gates."
-    },
-    {
-      "name": "hf-bot Server Proxy Gateway",
-      "type": "infrastructure",
-      "description": "Vercel-hosted FastAPI cloud routing engine coupled with MongoDB telemetry logging and an asynchronous server-side SMTP email sharing framework."
+      "guid": "hf-bot",
+      "name": "hf-bot Workspace Agent",
+      "description": "An open-source terminal developer agent and local sandbox workspace utility for safely validating Hugging Face repositories and automating local terminal workflows.",
+      "webpageUrl": {
+        "url": "https://github.com/kuyesu/hf-bot",
+        "wellKnown": ""
+      },
+      "repositoryUrl": {
+        "url": "https://github.com/kuyesu/hf-bot",
+        "wellKnown": ""
+      },
+      "licenses": ["spdx:MIT"],
+      "tags": ["developer-tools", "huggingface", "terminal", "automation-agent"]
     }
   ],
-  "maintainers": [
-    {
-      "name": "Kuyesu Rogers",
-      "role": "Project Lead & AI engineer"
-    },
-    {
-      "name": "Richard Kimera",
-      "role": "Co-Lead & Core System Engineer"
-    },
-    {
-      "name": "Fred Kaggwa",
-      "role": "Cloud Infrastructure & DevOps Architect"
-    }
-  ],
-  "financials": {
-    "organization_type": "open_source_collective",
-    "currency": "USD",
-    "needs": [
+  "funding": {
+    "channels": [
       {
-        "category": "infrastructure",
-        "amount": 3500.00,
-        "description": "Funding global API execution proxies, data persistence layers in MongoDB Atlas, and production server host nodes to scale the public Option A tier configuration."
-      },
-      {
-        "category": "development",
-        "amount": 8000.00,
-        "description": "Engineering advanced execution tools, implementing broader model support matrixes, and optimizing dynamic pre-flight caching layers to keep stream performance high."
-      },
-      {
-        "category": "security",
-        "amount": 1500.00,
-        "description": "Auditing local shell runtime interception processes and strengthening user privacy constraints within the centralized proxy telemetry layers."
-      }
-    ],
-    "funding_targets": [
-      {
-        "platform": "github_sponsors",
-        "url": "https://github.com/sponsors/kuyesu"
+        "guid": "github-sponsors-channel",
+        "type": "other",
+        "name": "GitHub Sponsors",
+        "description": "Direct financial backing portal for the hf-bot software lifecycle infrastructure overhead.",
+        "plans": [
+          {
+            "guid": "infra-hosting",
+            "status": "active",
+            "name": "Proxy Infrastructure & Log Hosting",
+            "description": "Funding global API execution proxies, data persistence layers in MongoDB Atlas, and production server host nodes to scale the public Option A tier configuration.",
+            "amount": 3500,
+            "currency": "USD"
+          },
+          {
+            "guid": "core-development",
+            "status": "active",
+            "name": "Advanced Feature Engineering",
+            "description": "Engineering advanced execution tools, implementing broader model support matrixes, and optimizing dynamic pre-flight caching layers to keep stream performance high.",
+            "amount": 8000,
+            "currency": "USD"
+          },
+          {
+            "guid": "security-audit",
+            "status": "active",
+            "name": "Security & Sandbox Hardening",
+            "description": "Auditing local shell runtime interception processes and strengthening user privacy constraints within the centralized proxy telemetry layers.",
+            "amount": 1500,
+            "currency": "USD"
+          }
+        ]
       }
     ]
   }
