@@ -9,6 +9,8 @@ An intelligent, multi-provider agentic CLI playground for the Hugging Face Ecosy
 
 ## 🛑 About 
 
+**hf-bot:** Hugging Face's vast model hub is a treasure trove, but navigating it can be overwhelming. Developers often face issues like downloading models that exceed their storage capacity, wasting time on dormant repositories, or needing to inspect model architectures without the overhead of full downloads.
+
 1. **`diskspace` (Preventing Storage Crashes):** Stops you from downloading a model that will crash your hard drive halfway through. It checks the remote model size against your remaining local storage before you download.
 2. **`vibecheck` (Evaluating Project Activity):** Checks monthly downloads, community likes, and lifecycle metrics so you can immediately see if a model is vibrant and maintained or a dormant archive.
 3. **`peek` (Inspecting Model Architecture):** Avoids downloading heavy model weights just to check basic parameters. It instantly snatches and parses the remote `config.json` to show context windows, attention heads, and model classes.
