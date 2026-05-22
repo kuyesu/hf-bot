@@ -33,24 +33,17 @@
     "channels": [
       {
         "guid": "open-collective-channel",
-        "type": "payment_provider",
+        "type": "payment-provider",
         "name": "Open Collective",
         "address": "https://opencollective.com/hf-bot",
         "description": "Support the hf-bot development collective safely through our transparent Open Collective fiscal hosting profile page."
       },
       {
         "guid": "github-sponsors-channel",
-        "type": "payment_provider",
+        "type": "payment-provider",
         "name": "GitHub Sponsors",
         "address": "https://github.com/sponsors/kuyesu",
         "description": "Sponsor the core maintenance team directly through your personal or organizational GitHub account profiles."
-      },
-      {
-        "guid": "paypal-channel",
-        "type": "payment_provider",
-        "name": "PayPal / Digital Providers",
-        "address": "mailto:kuyesu22@gmail.com",
-        "description": "Direct digital credit card processing channels can be utilized for one-time contributions. Contact kuyesu22@gmail.com to coordinate setup routing details."
       }
     ],
     "plans": [
